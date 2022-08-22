@@ -5,12 +5,12 @@ import "./index.css";
 // import Header from "./components/Header";
 // import Footer from "./components/Footer";
 import Home from "./pages/Home";
-import Inner from "./pages/inner";
+import Inner from "./assets/components/inner";
 
 ReactDOM.render(
   <React.StrictMode>
     <Home />
-    <Inner />
+    {/* <Inner /> */}
   </React.StrictMode>,
   document.getElementById("root")
 );

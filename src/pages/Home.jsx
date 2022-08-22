@@ -9,17 +9,18 @@ function Home() {
     <>
       <div className="bg-Bgcolor">
         <div className="p-20">
-          <h1 className="py-20 w-full text-center text-cyan-900 font-bold text-4xl">
+          <h1 className="py-10 w-full text-center text-cyan-900 font-bold text-4xl">
             Latest News
           </h1>
-          <p className="text-center">
+          <p className="text-center mb-6">
             Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
             eiusmod tempor incididunt ut labore et dolore magna aliq.
           </p>
-
-          {news.map((news) => (
-            <NewsCard news={news} key={news.city} />
-          ))}
+          <div className="grid gap-6 md:grid-cols-2 xl:grid-cols-3">
+            {news.map((news) => (
+              <NewsCard news={news} key={news.title} />
+            ))}
+          </div>
         </div>
       </div>
     </>

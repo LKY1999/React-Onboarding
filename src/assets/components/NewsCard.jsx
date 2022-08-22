@@ -2,13 +2,9 @@ import React from "react";
 
 export default function NewsCard({ news }) {
   return (
-    <div className="flex items-center rounded-lg bg-white shadow-lg overflow-hidden">
+    <div className="rounded-lg bg-white shadow-lg overflow-hidden">
       <div>
-        <img
-          className="h-32 w-32 flex-shrink-0"
-          src={news.imageUrl}
-          alt={news.imageAlt}
-        />
+        <img className="" src={news.imageUrl} alt={news.imageAlt} />
         <div>
           <h4>News</h4>
         </div>
@@ -18,12 +14,7 @@ export default function NewsCard({ news }) {
 
         <p className="text-gray-600">{news.description}</p>
         <div className="mt-4">
-          <a
-            href="./Inner"
-            className="text-brand-dark hover:text-brand font-semibold text-sm"
-          >
-            Read more
-          </a>
+          <a href="./">Read more</a>
         </div>
       </div>
     </div>
