@@ -1,6 +1,5 @@
 import React from "react";
 import "../styles/Home.css";
-import { Link } from "react-router-dom";
 import news from "../assets/data/news";
 import NewsCard from "../assets/components/NewsCard";
 
@@ -18,7 +17,7 @@ function Home() {
           </p>
           <div className="grid gap-6 md:grid-cols-2 xl:grid-cols-3">
             {news.map((news) => (
-              <NewsCard news={news} key={news.title} />
+              <NewsCard news={news} key={news.id} />
             ))}
           </div>
         </div>

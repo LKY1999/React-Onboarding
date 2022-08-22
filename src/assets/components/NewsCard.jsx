@@ -14,7 +14,7 @@ export default function NewsCard({ news }) {
 
         <p className="text-gray-600">{news.description}</p>
         <div className="mt-4">
-          <a href="./">Read more</a>
+          <a href="${news.id}">Read more</a>
         </div>
       </div>
     </div>
