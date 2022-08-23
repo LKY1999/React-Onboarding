@@ -1,10 +1,17 @@
 import React from "react";
-import news from "../data/news";
+// import news from "../data/news";
 import CommentCard from "./CommentCard";
+import {useParams} from "react-router-dom"
+
 
 export default function innerPage({ news }) {
+  console.log(useParams())
+
+  const {id}  = useParams();
+
   return (
     <div className="py-20 px-20 rounded-lg bg-white shadow-lg overflow-hidden">
+      <h2> Id is = {id}</h2>
       <div className="flex items-center">
         <img src="src/assets/back.svg" alt="back" className="h-5  "></img>
         <p className="pl-2">back</p>

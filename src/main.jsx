@@ -1,27 +1,30 @@
 import React from "react";
 import ReactDOM from "react-dom";
-// import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
+
 import "./index.css";
 import Home from "./pages/Home";
-import Inner from "./assets/components/inner";
+import Article from "./assets/components/Article";
 
-// function App() {
-//   return (
-//     <Router>
-//       <Switch>
-//         <Route path="/" component={Home} exact />
-//         <Route path="/Inner" component={Inner} />
-//       </Switch>
-//     </Router>
-//   );
-// }
 
-// export default App;
+
 
 ReactDOM.render(
   <React.StrictMode>
     <Home />
-    {/* <Inner /> */}
+    {/* <Article /> */}
   </React.StrictMode>,
   document.getElementById("root")
 );
+
+// ReactDOM.render(
+//     <Router>
+//       <Route exact path="/">
+//         <Home />
+//       </Route>
+//       <Route path="/">
+//         <Article/>
+//       </Route>
+//     </Router>
+//    ,
+//   document.getElementById("root")
+// );
