@@ -3,15 +3,12 @@ import ReactDOM from "react-dom";
 
 import "./index.css";
 import Home from "./pages/Home";
-import Article from "./assets/components/Article";
-
 
 
 
 ReactDOM.render(
   <React.StrictMode>
     <Home />
-    {/* <Article /> */}
   </React.StrictMode>,
   document.getElementById("root")
 );

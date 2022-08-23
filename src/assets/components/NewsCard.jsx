@@ -1,12 +1,9 @@
 import React from "react";
-import {Link} from "react-router-dom"
+import { Link } from "react-router-dom";
 
 export default function NewsCard({ news }) {
-
   return (
-    
     <div className="rounded-lg bg-white shadow-lg overflow-hidden">
-
       <div>
         <img className="" src={news.imageUrl} alt={news.imageAlt} />
         <div>
@@ -18,8 +15,7 @@ export default function NewsCard({ news }) {
 
         <p className="text-gray-600">{news.description}</p>
         <div className="mt-4">
-          <a href={news.id}>Read more</a>
-          {/* <Link to="/article"> Read More</Link> */}
+          <Link to={`/articles/${news.id}`}> Read More</Link>
         </div>
       </div>
     </div>
