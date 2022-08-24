@@ -5,33 +5,37 @@ import { Link } from "react-router-dom";
 export default function Article({ news, id }) {
   if (news.id == id) {
     return (
-      <div className="py-20 px-20 w-9/12 m-auto">
-        <div className="flex items-end">
-          <Link to={"/"}>
-            <img src="/src/assets/back.svg" alt="back" className="h-5 inline" />
-            <p className="pl-2 inline">Back</p>
-          </Link>
-        </div>
-        <h1 className="py-10 text-left text-cyan-900 font-bold text-3xl">
+      <div className="py-20 px-20 w-10/12 m-auto">
+        <Link to={"/"} className="flex items-center">
+          <img src="/src/assets/back.svg" alt="back" className="w-2" />
+          <p className="pl-2  font-semibold text-lg ">Back</p>
+        </Link>
+        <h1 className="mb-10 mt-4 text-left text-indigo-800 font-bold text-4xl">
           {news.title}
         </h1>
 
-        <img className=" mb-10" src={news.imageUrl} alt={news.imageAlt} />
+        <img
+          className=" w-10/12 my-10 mx-auto"
+          src={news.imageUrl}
+          alt={news.imageAlt}
+        />
         <div>
-          <p>{news.content}</p>
+          <p className="my-8 whitespace-pre-wrap">{news.content}</p>
         </div>
 
-        <div className="border-y-8">
-          <h2 className="py-10 text-3xl">Comments</h2>
-          <form className=" border-2 rounded max-w-sm">
+        <div className="border-y border-black">
+          <h2 className="mt-10 pb-6 text-3xl text-indigo-800 font-bold">
+            Comments ({news.comments.length})
+          </h2>
+          <form>
             <input
-              className=" p-1"
+              className=" p-1 pl-4 border-2 rounded-md max-w-sm border-indigo-800 w-1/2"
               type={"email"}
               id={"email"}
               value={"Email"}
             ></input>
           </form>
-          <div className=" mx-8">
+          <div className=" mb-10 pl-8">
             {news.comments.map((comment) => (
               <CommentCard comment={comment} key={news.comments.email} />
             ))}
