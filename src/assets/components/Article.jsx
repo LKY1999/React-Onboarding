@@ -9,7 +9,7 @@ export default function Article() {
   console.log(id);
 
   return (
-    <div className="">
+    <div>
       {news.map((news) => (
         <ArticleContent news={news} id={id} key={news.id} />
       ))}

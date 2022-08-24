@@ -14,5 +14,5 @@ module.exports = {
   variants: {
     extend: { padding: ["last"] },
   },
-  plugins: [],
+  plugins: [require("@tailwindcss/line-clamp")],
 };
